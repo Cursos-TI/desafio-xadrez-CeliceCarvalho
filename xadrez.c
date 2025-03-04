@@ -9,6 +9,8 @@ int main() {
     int totCasasTorre = 5;
     int totCasasBispo = 5;
     int totCasasRainha = 8;
+    int totCasasCavaloVertical = 2;
+    int totCasasCavaloHorizontal = 1; 
 
     // char direcaoTorre[10] = "Direita";
     // char direcaoBispo[20] = "Cima Direita";
@@ -22,7 +24,7 @@ int main() {
         casaTorre ++;//incremento na variavel toda vez que a peça andar uma casa
     }
 
-    printf("Movimentacao do Bispo\n");
+    printf("\nMovimentacao do Bispo\n");
 
     int casaBispo = 0;//inicialização da variável de controle da movimentação do Bispo
 
@@ -31,10 +33,21 @@ int main() {
         casaBispo ++;//incremento na variavel toda vez que a peça andar uma casa
     }while(casaBispo < totCasasBispo);
 
-    printf("Movimentacao da Rainha\n");
+    printf("\nMovimentacao da Rainha\n");
 
     for(int casaRainha = 0; casaRainha < totCasasRainha; casaRainha++){//estrutura de repetição for (inicialização da variavel de controle;condiuçaõ de repetição;incremento)
         printf("Esquerda\n");
+    }
+
+    printf("\nMovimentacao do Cavalo\n");
+
+    for(int casaCavaloHoriz = 0; casaCavaloHoriz < totCasasCavaloHorizontal; casaCavaloHoriz++){
+        int casaCavaloVert = 0;
+        while (casaCavaloVert < totCasasCavaloVertical){
+            printf("Baixo ");
+            casaCavaloVert ++;
+        }
+        printf("Esquerda ");
     }
 
     return 0;
